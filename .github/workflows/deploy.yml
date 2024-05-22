@@ -30,4 +30,4 @@ jobs:
           . root@165.232.112.81:~/realworld/
       - name: Restart the application
         run: |
-          ssh root@165.232.112.81 "npm install -g pm2 && pushd ~/realworld && npm install && popd && pm2 restart ecosystem.config.js"
+          ssh root@165.232.112.81 "npm install -g pm2 && pushd ~/realworld && npm install && pm2 restart ecosystem.config.js && popd"
