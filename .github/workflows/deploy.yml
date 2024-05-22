@@ -23,10 +23,10 @@ jobs:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Copy files to the server
         run: |
-          rsync -a --progress --human-readable --delete
-          --exclude-from '.gitignore'
-          --exclude .gitignore
-          --exclude .git
+          rsync -a --progress --human-readable --delete \
+          --exclude-from '.gitignore' \
+          --exclude .gitignore \
+          --exclude .git \
           . root@165.232.112.81:~/realworld/
       # - name: Restart the application
       #   run: |
