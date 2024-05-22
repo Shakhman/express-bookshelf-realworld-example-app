@@ -28,6 +28,6 @@ jobs:
           --exclude .gitignore \
           --exclude .git \
           . root@165.232.112.81:~/realworld/
-      # - name: Restart the application
-      #   run: |
-      #     ssh root@165.232.112.81 "pushd ~/realworld && npm install && popd && pm2 restart ecosystem.config.js"
+      - name: Restart the application
+        run: |
+          ssh root@165.232.112.81 "pushd ~/realworld && npm install && popd && pm2 restart ecosystem.config.js"
